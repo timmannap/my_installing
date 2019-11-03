@@ -1,0 +1,20 @@
+# Be in root user
+# yum install -y java-1.8*  --- For installing java 
+
+# To find java location 
+  find /usr/lib/jvm/java-1.8* | head -n 3
+
+# Above commnd showing the output like below
+    /usr/lib/jvm/java-1.8.0
+    /usr/lib/jvm/java-1.8.0-openjdk
+    /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn2.0.1.x86_64 --> this is our java main path 
+ 
+# Vi .bash_Profile  -->> Enter this file and add java path like below
+      JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.222.b10-0.amzn2.0.1.x86_64
+      PATH=$PATH:$JAVA_HOME:$HOME/bin
+      
+# source ~/.bash_profile  --->> By using this we are refressing 
+
+
+Now we can check java is installed or not 
+java -version 
